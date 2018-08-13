@@ -34,7 +34,7 @@ Cell.prototype.show = function () {
 Cell.prototype.countBees = function () {
   if (this.bee) {
     this.neighborCount = 1;
-    return; 
+    return;
   }
   var total = 0;
 
@@ -61,7 +61,7 @@ Cell.prototype.contains = function (x, y) {
 
 Cell.prototype.reveal = function () {
   this.revealed = true;
-  console.log(this.neighborCount); 
+  console.log(this.neighborCount);
   if (this.neighborCount == 0) {
     this.floodFill();
     //flood fill
@@ -73,10 +73,10 @@ Cell.prototype.floodFill = function () {
     for (var yoff = -1; yoff <= 1; yoff++) {
       var i = this.i + xoff;
       var j = this.j + yoff;
-      if(i> -1 && i < cols && j > -1 &&j < rows){
-        var neighbor = grid[i][j]; 
-        if(!neighbor.bee && !neighbor.reveal){
-          neighbor.reveal() ;
+      if (i > -1 && i < cols && j > -1 && j < rows) {
+        var neighbor = grid[i][j];
+        if (!neighbor.bee && !neighbor.reveal) {
+          neighbor.reveal();
         }
       }
     }

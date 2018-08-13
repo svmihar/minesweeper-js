@@ -66,9 +66,8 @@ function mousePressed() {
     for (var j = 0; j < rows; j++) {
       if (grid[i][j].contains(mouseX, mouseY)) {
         grid[i][j].reveal();
-
-        if(grid[i][j].bee){
-          gameOver(); 
+        if (grid[i][j].bee) {
+          gameOver();
         }
       }
     }
